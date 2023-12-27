@@ -1,18 +1,30 @@
 package OOP;
 
 public class Monk extends Hero {
-    public Monk(String nameHero) {
+    public Monk(String nameHero, int posX, int posy) {
         super(
                 50,
                 50,
                 1,
                 1,
                 new int[]{-35, -30},
-                nameHero);
+                nameHero,
+                "Monk",
+                posX,
+                posy);
+                maxPower = 75;
+                power = 75;
+                recovery = 35;
+                this.position = new Vector2(posX, posy);
+
     }
-    protected int maxPower = 75;
-    protected int power = 75;
-    protected int recovery = 35;
+    protected String heroType;
+
+    protected int maxPower;
+    protected int power;
+    protected int recovery;
+    protected Vector2 position;
+
 
     @Override
     public String toString() {
